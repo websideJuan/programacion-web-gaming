@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ${isActive.username}
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item logout" href="#">
+        <li><a class="dropdown-item logout">
           <i class="fa-solid fa-right-from-bracket"></i>
           Cerrar sesión
         </a></li>
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="text-center mt-3">
                 <div>
                   o<br> inicia sesión como
-                  <a class="guest" href="#">invitado</a>
+                  <a class="guest">invitado</a>
                 </div>
               </div>
             </div>
@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (event) => {
     // Clicks en links de inicio de sesión, registro y como invitado.
     if (event.target.classList.contains("login")) {
+      
       document.querySelector(".modal-backdrop").remove();
       const loginModal = createModal({
         title: "Iniciar sesión",
@@ -123,12 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
           </form>
           <div class="d-flex justify-content-between mt-3">
             <div>
-              <a class="guest" href="#">
+              <a class="guest">
                 ¿Olvidaste tu contraseña?
               </a>
             </div>
             <div>
-              <a class="register" href="#">Regístrate</a>
+              <a class="register">Regístrate</a>
             </div>
           </div>
         `,
@@ -212,6 +213,8 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("Error al crear usuario:", error);
         }
       });
+    } else if (event.target.classList.contains("resetPassword")) {
+      // Lógica para restablecer la contraseña
     } else if (event.target.classList.contains("guest")) {
       // Lógica para iniciar sesión como invitado
     } else if (event.target.classList.contains("logout")) {
@@ -220,6 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       return;
     }
+
     document.querySelector(".modal-backdrop").remove();
   });
 });
