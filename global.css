@@ -1,0 +1,126 @@
+@import url("./src/css/navbar.css");
+
+body {
+  background-color: #333;
+  color: white;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.glassEffect {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.clippad-container {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: -30px;
+  right: 0px;
+  z-index: 1000;
+  background-color: #333;
+  clip-path: polygon(0% 44.25%, 100% 57.25%, 100% 75%, 0% 75%);
+}
+
+.backdrop::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.288);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.backdrop-content {
+  z-index: 2;
+}
+
+.col .card:hover {
+  transform: scale(1.05);
+}
+
+/*Cards */
+
+.card-resize {
+  width: 220px;
+}
+
+.card-category {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #393636;
+}
+
+.card-category::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.card-category-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: 20;
+}
+
+.card-category-title {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card-category-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  z-index: 10;
+}
+
+
+@media (width > 768px) {
+  .carousel-inner img {
+    height: 550px;
+  }
+
+  .clippad-container {
+    height: 350px;
+    bottom: -110px;
+  }
+
+  .card-resize {
+    width: 100%;
+  }
+
+  .overflow-x-unset {
+    overflow-x: unset !important;
+  }
+}

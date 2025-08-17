@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Metadata-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Website</title>
+
+    <!--Boostrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!--CSS personalizado-->
+    <link rel="stylesheet" href="./global.css" />
+
+    <!--Font Awesome, bibloteca de iconos-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--Google font Oswald-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="custom-navbar">
+      <div
+        class="custom-container d-flex align-items-center justify-content-between"
+      >
+        <button
+          class="custom-navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggle"
+          aria-controls="navbarToggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="custom-navbar-toggler-icon">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+
+        <button class="btn text-white position-relative ms-auto">
+          <span>
+            <i class="fa-solid fa-cart-shopping fa-lg"></i>
+          </span>
+          <span
+            class="d-none badge bg-danger position-absolute top-0 start-100 translate-middle badge rounded-pill"
+            >0</span
+          >
+        </button>
+
+        <button class="custom-session-link" id="loginButton">
+          <span>
+            <i class="fa-regular fa-circle-user fa-xl"></i>
+          </span>
+        </button>
+
+        <div class="custom-collapse" id="navbarToggle">
+          <ul class="custom-navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="custom-nav-item">
+              <a class="custom-nav-link active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="custom-nav-item">
+              <a class="custom-nav-link" href="#">Link</a>
+            </li>
+            <li class="custom-nav-item">
+              <a class="custom-nav-link" href="#">Cuenta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="position-relative">
+      <div class="subMenuconsoles">
+        <div class="container-subMenu glassEffect">
+          <ul
+            class="d-flex list-unstyled justify-content-between mb-0 py-2 position-relative"
+            style="color: white; font-weight: 600"
+          >
+            <li>
+              <i class="fa-solid fa-desktop"></i>
+              PC
+            </li>
+            <li>
+              <i class="fa-brands fa-playstation"></i>
+              PlayStation
+            </li>
+
+            <li>
+              <i class="fa-brands fa-xbox"></i>
+              XBOX
+            </li>
+            <li>
+              <img src="./src/assets/icon/nintendo-switch.svg" alt="" />
+              Nintendo
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active backdrop">
+            <img
+              src="./src/assets/images/battleground-hd.jpg"
+              class="d-block"
+              alt="..."
+            />
+            <div
+              class="carousel-caption text-start top-50 start-50 translate-middle backdrop-content d-none d-md-block"
+            >
+              <h5>Battlergrounds</h5>
+              <p class="fw-light">
+                Experience the ultimate battle royale in Battlegrounds.
+              </p>
+              <div class="btn btn-secondary">
+                $<span class="game-price">29.99</span>
+                <span class="badge bg-danger">New</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item backdrop">
+            <img
+              src="./src/assets/images/cool-roblox.jpg"
+              class="d-block"
+              alt="..."
+            />
+            <div
+              class="carousel-caption text-start top-50 start-50 translate-middle backdrop-content d-none d-md-block"
+            >
+              <h5>Second slide label</h5>
+              <p class="fw-light">
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item backdrop">
+            <img
+              src="./src/assets/images/god-of-war.jpg"
+              class="d-block"
+              alt="..."
+            />
+            <div
+              class="carousel-caption text-start top-50 start-50 translate-middle backdrop-content d-none d-md-block"
+            >
+              <h5>Third slide label</h5>
+              <p class="fw-light">
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clippad-container"></div>
+    </main>
+    <section class="trends-section">
+      <div class="container">
+        <div class="trends-title d-flex align-items-center gap-2 py-4 pb-5">
+          <h5 class="mb-0">Tendencias</h5>
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div
+          class="row overflow-x-scroll flex-nowrap overflow-x-unset"
+          style="scrollbar-width: none"
+        >
+          <div class="col col-md-4">
+            <div class="card bg-transparent border-0 card-resize">
+              <img
+                src="./src/assets/covers/gta5.jpg"
+                class="card-img-top"
+                style="object-fit: cover; width: 100%; height: 150px"
+                alt=""
+              />
+              <div
+                class="card-body p-0 b-0 mt-2 d-flex justify-content-between"
+                style="color: white"
+              >
+                <h5 class="card-title mb-1">Battleground</h5>
+                <div class="card-discount">
+                  <span class="badge bg-danger">20% off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-md-4">
+            <div class="card bg-transparent border-0 card-resize">
+              <img
+                src="./src/assets/covers/fornite.jpg"
+                class="card-img-top"
+                style="object-fit: cover; width: 100%; height: 150px"
+                alt=""
+              />
+              <div
+                class="card-body p-0 b-0 mt-2 d-flex justify-content-between"
+                style="color: white"
+              >
+                <h5 class="card-title mb-1">Battleground</h5>
+                <div class="card-discount">
+                  <span class="badge bg-danger">20% off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-md-4">
+            <div class="card bg-transparent border-0 card-resize">
+              <img
+                src="./src/assets/covers/roblox.jpg"
+                class="card-img-top"
+                style="object-fit: cover; width: 100%; height: 150px"
+                alt=""
+              />
+              <div
+                class="card-body p-0 b-0 mt-2 d-flex justify-content-between"
+                style="color: white"
+              >
+                <h5 class="card-title mb-1">Battleground</h5>
+                <div class="card-discount">
+                  <span class="badge bg-danger">20% off</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="trends-title d-flex align-items-center gap-2 py-5 pb-4">
+          <h5 class="mb-0">Categorias</h5>
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div
+          class="row overflow-x-scroll flex-nowrap flex-md-wrap gap-2 py-2"
+          style="scrollbar-width: none"
+        >
+          <div class="col">
+            <div class="card-category card-resize">
+              <img
+                src="./src/assets/categorias/leon-kennedy-removebg-preview.png"
+                class="card-category-img"
+                alt="leon kennedy"
+              />
+              <div class="card-category-body">
+                <span class="card-category-title"> Terror </span>
+              </div>
+            </div>
+          </div>
+          <div class="col ">
+            <div class="card-category card-resize">
+              <img
+                src="./src/assets/categorias/leon-kennedy-removebg-preview.png"
+                class="card-category-img"
+                alt="leon kennedy"
+              />
+              <div class="card-category-body">
+                <span class="card-category-title"> Adicción </span>
+              </div>
+            </div>
+          </div>
+          <div class="col ">
+            <div class="card-category card-resize">
+              <img
+                src="./src/assets/categorias/leon-kennedy-removebg-preview.png"
+                class="card-category-img"
+                alt="leon kennedy"
+              />
+              <div class="card-category-body">
+                <span class="card-category-title"> Aventura </span>
+              </div>
+            </div>
+          </div>
+          <div class="col ">
+            <div class="card-category card-resize">
+              <img
+                src="./src/assets/categorias/leon-kennedy-removebg-preview.png"
+                class="card-category-img"
+                alt="leon kennedy"
+              />
+              <div class="card-category-body">
+                <span class="card-category-title"> Mundo abierto </span>
+              </div>
+            </div>
+          </div>
+          <div class="col ">
+            <div class="card-category card-resize">
+              <img
+                src="./src/assets/categorias/leon-kennedy-removebg-preview.png"
+                class="card-category-img"
+                alt="leon kennedy"
+              />
+              <div class="card-category-body">
+                <span class="card-category-title"> Supervivencia </span>
+              </div>
+            </div>
+          </div>
+          <div class="col ">
+            <div class="card-category card-resize">
+              <img
+                src="./src/assets/categorias/leon-kennedy-removebg-preview.png"
+                class="card-category-img"
+                alt="leon kennedy"
+              />
+              <div class="card-category-body">
+                <span class="card-category-title"> Carreras </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Bootstrap JS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <!--JavaScript personalizado-->
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
