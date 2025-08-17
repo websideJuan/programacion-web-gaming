@@ -46,6 +46,7 @@ export function showModal(modal) {
 
   if (modalExisting) {
     modalExisting.remove();
+    document.body.style = "";
   }
 
   const bsModal = new window.bootstrap.Modal(modal);
