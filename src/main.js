@@ -68,19 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 <ul class="list-inline d-grid grid-cols-1 gap-3">
                   <li class="d-flex justify-content-center align-items-center ">
                     <button class="btn btn-outline-primary w-100 login">
-                      <img src="/src/assets/icon/simbolo-de-google.png" alt="Google" />
+                      <img src="./src/assets/icon/simbolo-de-google.png" alt="Google" />
                       Inicia session Google
                     </button>
                   </li>
                   <li class="d-flex justify-content-center align-items-center ">
                     <button class="btn btn-outline-primary w-100">
-                      <img src="/src/assets/icon/simbolo-de-xbox.png" alt="Xbox" />
+                      <img src="./src/assets/icon/simbolo-de-xbox.png" alt="Xbox" />
                       <span class="ms-2">Iniciar session Xbox</span>
                     </button>
                   </li>
                   <li class="d-flex justify-content-center align-items-center ">
                     <button class="btn btn-outline-primary w-100">
-                      <img src="/src/assets/icon/simbolo-de-steam.png" alt="Steam" />
+                      <img src="./src/assets/icon/simbolo-de-steam.png" alt="Steam" />
                       <span class="ms-2">Inicia session Steam</span>
                     </button>
                   </li>
